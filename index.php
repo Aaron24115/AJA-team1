@@ -1,14 +1,9 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=aanmelden";
-$user = "root";
-$pass = "";
-$conn =  new PDO($dsn, $user, $pass);
+require_once "conn.php";
 
-$sql = "SELECT*FROM aanmelding";
+$get_tweets = $conn->prepare("SELECT * from tweets");
+$get_tweets->execute();
+$tweets = $get_tweets->fetchAll();
+Var_dump($tweets);
 
-$stmt = $conn->query($sql);
-
-while ( $row = $stmt->fetch(PDO::FETCH_OBJ)) {
-    echo "<br>" . $row->Achternaam;
-    echo "<pre>".print_r($row, true)."</pre>";
-}
+?>
