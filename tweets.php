@@ -1,17 +1,10 @@
-<?php
-require_once "conn.php";
 
-$get_tweets = $conn->prepare("SELECT * from tweets");
-$get_tweets->execute();
-$tweets = $get_tweets->fetchAll();
-Var_dump($tweets);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Register on Chirpify</title>
-    <link rel="stylesheet" href="main.css">
+
 </head>
 <body>
 
@@ -22,31 +15,15 @@ Var_dump($tweets);
     <a href="#">Contact</a>
 </div>
 
+<?php
+//verbinding
+require_once "conn.php";
+$get_all_tweets = $conn->prepare( "SELECT * FROM tweets");
+//uitvoering
+$get_all_tweets->execute();
+$tweets = $get_all_tweets->fetchAll();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+foreach ($tweets as $tweet){
+    echo $tweet["content"];
+}
+?>

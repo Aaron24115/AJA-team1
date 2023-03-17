@@ -8,7 +8,7 @@ $insert_user->bindParam(":username", $username);
 $insert_user->bindParam(":password", $password);
 $insert_user->execute();
 
-//echo strip_tags($_POST['username']);
+echo strip_tags($_POST['username']);
 
 ?>
 
