@@ -11,7 +11,7 @@
 </head>
 
 <div class="Twitter-nav">
-                <a href="index.php"><img src=images/Twitter-logo.png height="40" width="56"/></a>
+    <a href="index.php"><img src=images/Twitter-logo.png height="40" width="56"/></a>
     <ul>
         <li><a href="tweets.php">chirps</a></li>
         <li><a href="registration_form.php">Register on Chirpify</a></li>
@@ -20,16 +20,13 @@
 
 <body>
 
-<h1>Register</h1>
+<h2>Upload a chirp</h2>
 
-<form action="registration.php" method="post">
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" required autofocus placeholder="email">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" required placeholder="e.g. John Doe">
-    <label for="password">Password</label>
-    <input type="password" id="password" required name="password" placeholder="password">
-    <input type="submit" value="Register">
+<form action="link_tweet_database.php" method="post">
+    <label for="chirp">Write down your chirp</label>
+    <input type="text" id="chirp" name="chirp" required autofocus placeholder="chirp (max. 150 characters)">
+    <input type="submit" name="submit-tweet" value="Register">
 </form>
+
 </body>
 </html>
