@@ -25,7 +25,7 @@
 <form action="link_tweet_database.php" method="post">
     <label for="chirp">Write down your chirp</label>
     <input type="text" id="chirp" name="chirp" required autofocus placeholder="chirp (max. 150 characters)">
-    <input type="submit" name="submit-tweet" value="Register">
+    <input type="submit" name="submit-tweet" value="Upload chirp">
 </form>
 
 </body>
